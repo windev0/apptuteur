@@ -1,5 +1,12 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
+
+calcul:
+  path: /calcul/{value}
+  controller: \App\Controller\MainController::indexter
+  requirements:
+    value: '^(?:100|[1-9]?\d)$'
+  methods: [GET]
